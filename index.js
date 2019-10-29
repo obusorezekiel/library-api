@@ -8,7 +8,7 @@ const PORT = 3500
 
 
 app.use(express.json())
-app.use('/api', libraryRoute);
+app.use('/', libraryRoute);
 
 
 

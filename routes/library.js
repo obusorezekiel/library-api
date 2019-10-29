@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const Library = require('../models/Library')
 
-router.get('/library', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const libraries = await Library.find();
         res.json(libraries)
@@ -13,7 +13,7 @@ router.get('/library', async (req, res) => {
 })
 
 
-router.post('/library', async (req, res) => {   
+router.post('/', async (req, res) => {   
     try {
         const library = await new Library(req.body).save();
         res.json(library)
@@ -23,7 +23,7 @@ router.post('/library', async (req, res) => {
     }
 })
 
-router.get('/library/:id', async (req,res) => {
+router.get('/:id', async (req,res) => {
     try{
         const library = await Library.findOne({ _id: req.params.id})
         res.json(library)
@@ -33,7 +33,7 @@ router.get('/library/:id', async (req,res) => {
     }
 })
 
-router.patch('/library/:id', async (req,res) => {
+router.patch('/:id', async (req,res) => {
     try {
         const libraryUpdate = await Library.updateOne(
             { _id: res.params.id },
@@ -50,7 +50,7 @@ router.patch('/library/:id', async (req,res) => {
     }
 })
 
-router.delete('/library/:id', async(req,res) => {
+router.delete('/:id', async(req,res) => {
     try{
         const deleteLibrary = await Library.deleteOne({ _id: req.params.id })
         res.json(deleteLibrary)

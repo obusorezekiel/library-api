@@ -8,35 +8,35 @@
     ],
     "routes": [
         {
-            "src": "/api/library",
+            "src": "/",
             "dest": "index.js",
             "methods": [
                 "GET"
             ]
         },
         {
-            "src": "/api/library",
+            "src": "/",
             "dest": "index.js",
             "methods": [
                 "POST"
             ]
         },
         {
-            "src": "/api/library/id",
+            "src": "/id",
             "dest": "index.js",
             "methods": [
                 "GET"
             ]
         },
         {
-            "src": "/api/library/id",
+            "src": "/id",
             "dest": "index.js",
             "methods": [
                 "PATCH"
             ]
         },
         {
-            "src": "/api/library/id",
+            "src": "/id",
             "dest": "index.js",
             "methods": [
                 "DELETE"
