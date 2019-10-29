@@ -8,4 +8,5 @@ Dependencies include
 - Express
 - Mongoose
 
-## To Start
+## To view
+Install POSTMAN and input the API endpoints
